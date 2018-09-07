@@ -3,18 +3,83 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:text="@string/fragmenta"
         />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/fragmentb"
-        />
+    <LinearLayout
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="3"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fragmentb"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="106dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fragmentc" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fragmentd" />
+        </LinearLayout>
+    </LinearLayout>
+    <!-- buttons go here -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- Load Fragment 2 -->
+            <Button
+                android:id="@+id/button_load_2"
+                android:text="@string/load_frag_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <!-- Load Fragment 3 -->
+            <Button
+                android:id="@+id/button_load_3"
+                android:text="@string/load_frag_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- Load Fragment 4 -->
+            <Button
+                android:id="@+id/button_load_4"
+                android:text="@string/load_frag_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <!-- Switch 3&4 -->
+            <Button
+                android:id="@+id/button_swap_3_4"
+                android:text="@string/swap_3_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>

@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">CS3270A2</string>
-    <string name="fragmentb">FragmentB</string>
-    <string name="fragmenta">FragmentA</string>
+    <string name="fragmenta">Fragment A</string>
+    <string name="fragmentb">Fragment B</string>
+    <string name="fragmentc">Fragment C</string>
+    <string name="fragmentd">Fragment D</string>
+    <string name="load_frag_2">Load Fragment 2</string>
+    <string name="load_frag_3">Load Fragment 3</string>
+    <string name="load_frag_4">Load Fragment 4</string>
+    <string name="swap_3_4">Swap 3&amp;4</string>
 </resources>

@@ -13,13 +13,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Button btnLoad2 = (Button) findViewById(R.id.button_load_2);
+        Button btnLoad3 = (Button) findViewById(R.id.button_load_3);
+        Button btnLoad4 = (Button) findViewById(R.id.button_load_4);
+        Button btnSwap  = (Button) findViewById(R.id.button_swap_3_4);
 
         fm.beginTransaction()
                 .replace(R.id.fragAContainer, new FragmentA(), "ContainerA")
                 //.addToBackStack(null)
                 .commit();
 
-        Button btnLoad2 = (Button) findViewById(R.id.button_load_2);
         btnLoad2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -30,13 +33,25 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        fm.beginTransaction()
-                .replace(R.id.fragCContainer, new FragmentC(), "ContainerC")
-                //.addToBackStack(null)
-                .commit();
-        fm.beginTransaction()
-                .replace(R.id.fragDContainer, new FragmentD(), "ContainerD")
-                //.addToBackStack(null)
-                .commit();
+        btnLoad3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                fm.beginTransaction()
+                        .replace(R.id.fragCContainer, new FragmentC(), "ContainerC")
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+
+        btnLoad4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                fm.beginTransaction()
+                    .replace(R.id.fragDContainer, new FragmentD(), "ContainerD")
+                    .addToBackStack(null)
+                    .commit();
+            }
+        });
     }
 }

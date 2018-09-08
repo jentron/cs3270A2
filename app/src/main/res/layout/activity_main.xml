@@ -11,39 +11,50 @@
         android:id="@+id/fragAContainer"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="7"
+        android:background= "@color/assignmentGreen"
+        />
     <LinearLayout
         android:layout_height="0dp"
         android:layout_width="match_parent"
-        android:layout_weight="3"
+        android:layout_weight="19"
         android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/fragmentb"
+        <FrameLayout
+            android:id="@+id/fragBContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background= "@color/assignmentBlue"
             />
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="106dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
             android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/fragmentc" />
+            <FrameLayout
+                android:id="@+id/fragCContainer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background= "@color/assignmentYellow"
+                />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/fragmentd" />
+            <FrameLayout
+                android:id="@+id/fragDContainer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background= "@color/assignmentRed"
+                />
         </LinearLayout>
     </LinearLayout>
     <!-- buttons go here -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3">
+        android:layout_weight="14">
         <LinearLayout
             android:layout_width="0dp"
             android:layout_weight="1"
@@ -76,7 +87,7 @@
             <!-- Switch 3&4 -->
             <Button
                 android:id="@+id/button_swap_3_4"
-                android:text="@string/swap_3_4"
+                android:text="@string/switch_3_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </LinearLayout>

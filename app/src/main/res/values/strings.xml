@@ -7,8 +7,5 @@
     <string name="load_frag_2">Load Fragment 2</string>
     <string name="load_frag_3">Load Fragment 3</string>
     <string name="load_frag_4">Load Fragment 4</string>
-    <string name="swap_3_4">Swap 3&amp;4</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="switch_3_4">Switch 3&amp;4</string>
 </resources>

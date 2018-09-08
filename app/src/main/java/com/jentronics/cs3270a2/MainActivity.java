@@ -1,5 +1,6 @@
 package com.jentronics.cs3270a2;
 
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,7 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
     private FragmentManager fm = getSupportFragmentManager();
-
+    private boolean inverted = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,11 +47,34 @@ public class MainActivity extends AppCompatActivity {
         btnLoad4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 fm.beginTransaction()
                     .replace(R.id.fragDContainer, new FragmentD(), "ContainerD")
                     .addToBackStack(null)
                     .commit();
+            }
+        });
+
+        btnSwap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Fragment fragX = fm.findFragmentByTag("ContainerC");
+//                Fragment fragY = fm.findFragmentByTag("ContainerD");
+                Fragment fragX;
+                Fragment fragY;
+                if( !inverted) {
+                    fragX = new FragmentC();
+                    fragY = new FragmentD();
+                    inverted = true;
+                } else {
+                    fragY = new FragmentC();
+                    fragX = new FragmentD();
+                    inverted = false;
+                }
+                fm.beginTransaction()
+                        .replace(R.id.fragCContainer, fragY, "ContainerC")
+                        .replace(R.id.fragDContainer, fragX, "ContainerD")
+                        .addToBackStack(null)
+                        .commit();
             }
         });
     }

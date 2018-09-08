@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_margin="10dp"
     tools:context=".MainActivity">
 
     <FrameLayout
@@ -12,18 +13,21 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="7"
+        android:layout_marginBottom="10dp"
         android:background= "@color/assignmentGreen"
         />
     <LinearLayout
         android:layout_height="0dp"
         android:layout_width="match_parent"
         android:layout_weight="19"
+        android:layout_marginBottom="10dp"
         android:orientation="horizontal">
         <FrameLayout
             android:id="@+id/fragBContainer"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
+            android:layout_marginRight="10dp"
             android:background= "@color/assignmentBlue"
             />
 
@@ -38,6 +42,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
+                android:layout_marginBottom="10dp"
                 android:background= "@color/assignmentYellow"
                 />
 
